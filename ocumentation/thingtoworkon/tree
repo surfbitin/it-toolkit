@@ -1,0 +1,19 @@
+it-toolkit/
+├── PowerShell/
+│   ├── WindowsUpdate/
+│   │   ├── Install-PSWindowsUpdate.ps1
+│   │   ├── Check-DriverUpdates.ps1
+│   │   └── Install-DriverUpdates.ps1
+│   ├── Monitors/
+│   │   ├── Get-Monitors.ps1
+│   │   └── Get-MonitorDrivers.ps1
+│   ├── ActiveDirectory/
+│   ├── Intune/
+│   └── Azure/
+├── CMD/
+├── SQL/
+├── Documentation/
+│   ├── PowerShell.md
+│   ├── WindowsUpdate.md
+│   └── Troubleshooting.md
+└── README.md
