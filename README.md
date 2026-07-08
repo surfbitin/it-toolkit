@@ -8,25 +8,31 @@ A comprehensive toolkit for IT administration, system management, and automation
 it-toolkit/
 ├── Network/                 # Network diagnostics and utilities
 │   ├── Windows/            # PowerShell network scripts
-│   └── Linux/              # Bash network scripts
+│   ├── Linux/              # Bash network scripts
+│   └── README.md
 │
 ├── Security/               # Security scanning and hardening
 │   ├── Windows/            # PowerShell security scripts
-│   └── Linux/              # Bash security scripts
+│   ├── Linux/              # Bash security scripts
+│   └── README.md
 │
 ├── System/                 # System information and maintenance
 │   ├── Windows/            # PowerShell system scripts
-│   └── Linux/              # Bash system scripts
+│   ├── Linux/              # Bash system scripts
+│   └── README.md
 │
 ├── File-Management/        # File operations and cleanup
 │   ├── Windows/            # PowerShell file management scripts
-│   └── Linux/              # Bash file management scripts
+│   ├── Linux/              # Bash file management scripts
+│   └── README.md
 │
 ├── Utilities/              # General purpose helper functions
 │   ├── Windows/            # PowerShell utilities
-│   └── Linux/              # Bash utilities
+│   ├── Linux/              # Bash utilities
+│   └── README.md
 │
-and README.md files in each category
+├── README.md              # This file
+└── .gitignore
 ```
 
 ## Quick Start
@@ -43,7 +49,7 @@ and README.md files in each category
 # Check security status
 .\Security\Windows\Check-SecureBootStatus.ps1
 
-# Manage files
+# Remove old files
 .\File-Management\Windows\Remove-OldFiles.ps1 -Path C:\Temp -Days 30
 ```
 
@@ -62,7 +68,7 @@ chmod +x **/*.sh
 # Check security status
 sudo ./Security/Linux/check-security-status.sh
 
-# Manage files
+# Remove old files
 ./File-Management/Linux/remove-old-files.sh -p /tmp -d 30
 ```
 
@@ -72,31 +78,28 @@ sudo ./Security/Linux/check-security-status.sh
 - Network diagnostics and connectivity testing
 - DNS resolution checking
 - Port connectivity testing
-- Bandwidth monitoring
 
 ### System Management
 - System information and resource monitoring
 - Disk usage analysis
 - Process monitoring
-- System health checks
 
 ### Security
 - Security scanning and hardening
-- Firewall status checks
+- SecureBoot and UEFI checking
 - SSH configuration auditing
-- Permission auditing
 
 ### File Management
 - Old file removal and cleanup
 - Backup and archive utilities
 - Duplicate file detection
 - Log file cleanup
+- File organization by extension
 
 ### Utilities
 - System diagnostics and reporting
 - Health checks
-- Performance optimization
-- Service management
+- Profile management
 
 ## Requirements
 
@@ -107,13 +110,13 @@ sudo ./Security/Linux/check-security-status.sh
 
 ### Bash Scripts
 - Bash 4.0+
-- Common Linux utilities (grep, awk, sed, etc.)
+- Common Linux utilities (grep, awk, sed, find, tar, etc.)
 - Root/sudo access for some operations
 - Supported distributions: Ubuntu/Debian, CentOS/RHEL, Fedora, Alpine, Arch Linux
 
 ## Usage
 
-All scripts are organized by category with platform-specific subdirectories. You can run them directly or import them as modules in your shell profile.
+All scripts are organized by category with platform-specific subdirectories (Windows/ and Linux/).
 
 For detailed information about each category:
 - [Network Tools](./Network/README.md)
@@ -129,6 +132,7 @@ For detailed information about each category:
 3. **Run in test environment first** - Before deploying to production systems
 4. **Keep scripts updated** - Check for improvements and security patches
 5. **Use with caution on production systems** - Test destructive operations carefully
+6. **Check script parameters** - Review available options with `-h` or `-help` flag
 
 ## Contributing
 
@@ -137,6 +141,7 @@ Contributions welcome! Please ensure:
 - Both PowerShell and Bash versions are provided for new tools
 - Add appropriate README entries in category folders
 - Test scripts thoroughly before submitting
+- Follow the folder structure: `Category/Windows/` or `Category/Linux/`
 
 ## License
 
