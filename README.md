@@ -1,28 +1,32 @@
 # IT Toolkit
 
-A comprehensive toolkit for IT administration, system management, and automation across Windows and Linux platforms.
+A comprehensive toolkit for IT administration, system management, and automation across Windows and Linux platforms. Scripts are organized by function category with platform-specific implementations.
 
 ## Repository Structure
 
 ```
 it-toolkit/
-├── PowerShell/              # Windows PowerShell Scripts
-│   ├── Security/            # Security scanning and hardening
-│   ├── System/              # System information and maintenance
-│   ├── Network/             # Network diagnostics and utilities
-│   ├── FileManagement/      # File operations and cleanup
-│   ├── Utilities/           # General purpose helpers
-│   └── Monitors/            # System monitoring scripts
+├── Network/                 # Network diagnostics and utilities
+│   ├── Windows/            # PowerShell network scripts
+│   └── Linux/              # Bash network scripts
 │
-├── Bash/                    # Linux Bash Scripts
-│   ├── Security/            # Security checks and hardening
-│   ├── System/              # System information and maintenance
-│   ├── Network/             # Network diagnostics and utilities
-│   ├── FileManagement/      # File operations and cleanup
-│   ├── Monitoring/          # Performance and health monitoring
-│   └── Utilities/           # General purpose helpers
+├── Security/               # Security scanning and hardening
+│   ├── Windows/            # PowerShell security scripts
+│   └── Linux/              # Bash security scripts
 │
-└── docs/                    # Documentation
+├── System/                 # System information and maintenance
+│   ├── Windows/            # PowerShell system scripts
+│   └── Linux/              # Bash system scripts
+│
+├── File-Management/        # File operations and cleanup
+│   ├── Windows/            # PowerShell file management scripts
+│   └── Linux/              # Bash file management scripts
+│
+├── Utilities/              # General purpose helper functions
+│   ├── Windows/            # PowerShell utilities
+│   └── Linux/              # Bash utilities
+│
+and README.md files in each category
 ```
 
 ## Quick Start
@@ -31,39 +35,68 @@ it-toolkit/
 
 ```powershell
 # Get system information
-.\PowerShell\System\Get-SystemInfo.ps1
+.\System\Windows\Get-SystemInfo.ps1
 
 # Test network connectivity
-.\PowerShell\Network\Test-Connectivity.ps1
+.\Network\Windows\Test-Connectivity.ps1
 
 # Check security status
-.\PowerShell\Security\Check-SecureBootStatus.ps1
+.\Security\Windows\Check-SecureBootStatus.ps1
+
+# Manage files
+.\File-Management\Windows\Remove-OldFiles.ps1 -Path C:\Temp -Days 30
 ```
 
 ### Linux (Bash)
 
 ```bash
 # Make scripts executable
-chmod +x Bash/**/*.sh
+chmod +x **/*.sh
 
 # Get system information
-./Bash/System/get-system-info.sh
+./System/Linux/get-system-info.sh
 
 # Test network connectivity
-./Bash/Network/test-connectivity.sh
+./Network/Linux/test-connectivity.sh
 
 # Check security status
-./Bash/Security/check-security-status.sh
+sudo ./Security/Linux/check-security-status.sh
+
+# Manage files
+./File-Management/Linux/remove-old-files.sh -p /tmp -d 30
 ```
 
 ## Features
 
-- **Network Tools** - Network diagnostics and utilities
-- **System Management** - System information, updates, and maintenance
-- **Security** - Security scanning and hardening scripts
-- **File Management** - File operations and cleanup utilities
-- **Monitoring** - System monitoring and health checks
-- **Utilities** - General purpose helper functions
+### Network Tools
+- Network diagnostics and connectivity testing
+- DNS resolution checking
+- Port connectivity testing
+- Bandwidth monitoring
+
+### System Management
+- System information and resource monitoring
+- Disk usage analysis
+- Process monitoring
+- System health checks
+
+### Security
+- Security scanning and hardening
+- Firewall status checks
+- SSH configuration auditing
+- Permission auditing
+
+### File Management
+- Old file removal and cleanup
+- Backup and archive utilities
+- Duplicate file detection
+- Log file cleanup
+
+### Utilities
+- System diagnostics and reporting
+- Health checks
+- Performance optimization
+- Service management
 
 ## Requirements
 
@@ -80,11 +113,30 @@ chmod +x Bash/**/*.sh
 
 ## Usage
 
-All scripts are located in their respective platform and category folders. You can run them directly or import them as modules in your shell profile.
+All scripts are organized by category with platform-specific subdirectories. You can run them directly or import them as modules in your shell profile.
 
-For detailed information about each script, see the README.md files in the respective directories:
-- [PowerShell Scripts](./PowerShell/README.md)
-- [Bash Scripts](./Bash/README.md)
+For detailed information about each category:
+- [Network Tools](./Network/README.md)
+- [Security Tools](./Security/README.md)
+- [System Tools](./System/README.md)
+- [File Management](./File-Management/README.md)
+- [Utilities](./Utilities/README.md)
+
+## Best Practices
+
+1. **Always review scripts before running** - Especially those requiring elevated privileges
+2. **Make scripts executable** - `chmod +x script.sh` on Linux
+3. **Run in test environment first** - Before deploying to production systems
+4. **Keep scripts updated** - Check for improvements and security patches
+5. **Use with caution on production systems** - Test destructive operations carefully
+
+## Contributing
+
+Contributions welcome! Please ensure:
+- Scripts are well-commented
+- Both PowerShell and Bash versions are provided for new tools
+- Add appropriate README entries in category folders
+- Test scripts thoroughly before submitting
 
 ## License
 
