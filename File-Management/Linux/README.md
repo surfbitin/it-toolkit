@@ -1,1 +1,0 @@
-# Placeholder for Linux file management scripts
