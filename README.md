@@ -1,25 +1,27 @@
-# it-toolkit
+# IT Toolkit
 
-A PowerShell toolkit for IT operations and system administration.
+A comprehensive PowerShell toolkit for IT administration, system management, and automation.
 
-## Overview
+## Contents
 
-**it-toolkit** is a collection of PowerShell scripts and utilities designed to streamline common IT operations tasks and system administration workflows.
+- **Network Tools** - Network diagnostics and utilities
+- **System Management** - System information, updates, and maintenance
+- **User Management** - Active Directory and local user administration
+- **File Management** - File operations and cleanup utilities
+- **Security** - Security scanning and hardening scripts
+- **Monitoring** - System monitoring and health checks
+- **Utilities** - General purpose helper functions
 
-## Features
+## Usage
 
-- PowerShell-based automation scripts
-- Easy-to-use utilities for IT operations
-- Modular design for flexibility and reusability
+All scripts are located in their respective folders. You can run them directly or import them as modules in your PowerShell profile.
 
 ## Requirements
 
-- PowerShell 5.0 or higher
-- Windows operating system (or PowerShell Core for cross-platform support)
+- PowerShell 5.0 or higher (or PowerShell Core)
+- Administrator privileges for most scripts
+- Windows 10/11 or Windows Server 2016+
 
-## Installation
+## License
 
-1. Clone the repository:
-   ```powershell
-   git clone https://github.com/surfbitin/it-toolkit.git
-   cd it-toolkit
+MIT

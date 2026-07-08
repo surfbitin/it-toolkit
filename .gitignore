@@ -1,0 +1,23 @@
+# PowerShell
+*.ps1xml
+*.psc1
+*.psd1
+*.psm1
+*.iss
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.txt
+
+# Temp
+*.tmp
+.temp/
