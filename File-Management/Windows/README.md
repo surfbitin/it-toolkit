@@ -1,1 +1,0 @@
-# Placeholder for Windows file management scripts
